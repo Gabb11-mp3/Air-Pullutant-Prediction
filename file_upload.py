@@ -67,8 +67,7 @@ def load_and_clean_data(file_path: PathLike) -> pd.DataFrame:
     data = data[data["pollutant"] != ""]
     data = data.sort_values(["pollutant", "date"])
 
-    # Interpolate each pollutant independently so values never leak between
-    # pollutant groups.
+    # Interpolate each pollutant independently.
     data["concentration"] = (
         data.groupby("pollutant")["concentration"]
         .transform(

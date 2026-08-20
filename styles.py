@@ -1,4 +1,4 @@
-"""Qt stylesheet for the AirScope user interface."""
+"""Qt stylesheet for the AirScope interface."""
 
 from PyQt5.QtWidgets import QWidget
 
@@ -35,7 +35,8 @@ QLabel#AppSubtitle {
     font-size: 10pt;
 }
 
-QLabel#FieldLabel, QLabel#SectionTitle {
+QLabel#FieldLabel,
+QLabel#SectionTitle {
     background: transparent;
     color: #0F172A;
     font-weight: 700;
@@ -45,7 +46,8 @@ QLabel#SectionTitle {
     font-size: 13pt;
 }
 
-QLabel#PathLabel, QLabel#MutedLabel {
+QLabel#PathLabel,
+QLabel#MutedLabel {
     background: transparent;
     color: #64748B;
 }
@@ -118,7 +120,8 @@ QHeaderView::section {
     padding: 8px;
 }
 
-QScrollArea#ChartScroll, QToolBar#ChartToolbar {
+QScrollArea#ChartScroll,
+QToolBar#ChartToolbar {
     background-color: #F8FAFC;
     border: none;
 }
@@ -131,5 +134,5 @@ QStatusBar {
 
 
 def apply_styles(widget: QWidget) -> None:
-    """Apply the shared AirScope stylesheet to a widget and its children."""
+    """Apply the shared stylesheet."""
     widget.setStyleSheet(APP_STYLESHEET)
